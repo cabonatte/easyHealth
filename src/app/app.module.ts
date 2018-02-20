@@ -9,6 +9,7 @@ import { ProfissionaisComponent } from './profissionais/profissionais.component'
 import { FooterComponent } from './footer/footer.component';
 import { PrecoComponent } from './preco/preco.component';
 import { ReviewComponent } from './review/review.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReviewComponent } from './review/review.component';
     ProfissionaisComponent,
     FooterComponent,
     PrecoComponent,
-    ReviewComponent
+    ReviewComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule
