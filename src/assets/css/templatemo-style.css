@@ -189,7 +189,7 @@ http://www.templatemo.com/tm-509-hydro
     animation: spinner .9s linear infinite;
   }
 
-  @-webkit-@keyframes spinner {
+  @keyframes spinner {
     to {transform: rotate(360deg);}
   }
 
