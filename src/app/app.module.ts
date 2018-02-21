@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PrecoComponent } from './preco/preco.component';
 import { ReviewComponent } from './review/review.component';
 import { HomeComponent } from './home/home.component';
+import { ServicosComponent } from './servicos/servicos.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     PrecoComponent,
     ReviewComponent,
-    HomeComponent
+    HomeComponent,
+    ServicosComponent
   ],
   imports: [
     BrowserModule
