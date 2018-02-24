@@ -11,7 +11,9 @@ import { PrecoComponent } from './preco/preco.component';
 import { ReviewComponent } from './review/review.component';
 import { HomeComponent } from './home/home.component';
 import { ServicosComponent } from './servicos/servicos.component';
-
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProfissionalPageComponent } from './pages/profissional-page/profissional-page.component';
+import { RoutingModule } from './app.router';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,13 @@ import { ServicosComponent } from './servicos/servicos.component';
     PrecoComponent,
     ReviewComponent,
     HomeComponent,
-    ServicosComponent
+    ServicosComponent,
+    HomePageComponent,
+    ProfissionalPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
