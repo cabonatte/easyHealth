@@ -1,6 +1,5 @@
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-
         <div class="col-lg-12">
             <div class="card card-user">
                 <div class="content text-center">
@@ -44,7 +43,129 @@
                 </div>
             </div>
             <div class="card">
+<!-- perfil -->
+<ngb-tabset>
+        <ngb-tab title="Simple">
+            <ng-template ngbTabContent>
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title"> Perfil</h4>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input [(ngModel)]='usuario.email' [ngModelOptions]="{standalone: true}" type="email" class="form-control border-input" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Senha</label>
+                                        <input [(ngModel)]='usuario.senha' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input" placeholder="Senha"
+                                            value="******">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Confirmaçaão de Senha</label>
+                                        <input [(ngModel)]='usuario.confirmaSenha' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                            placeholder="Senha" value="******">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Nome</label>
+                                        <input [(ngModel)]='usuario.nome' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input" placeholder="Nome"
+                                            value="Nome">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Sobrenome</label>
+                                        <input [(ngModel)]='usuario.sobrenome' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                            placeholder="Sobrenome" value="Sobrenome">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-tab>
 
+<!-- Endereco -->
+        <ngb-tab>
+          <ng-template ngbTabTitle>Endereço</ng-template>
+          <ng-template ngbTabContent>
+                <div class="card">
+                        <div class="header">
+                            <h4 class="title">Endereço</h4>
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>*CEP</label>
+                                        <input [(ngModel)]='perfilProfissional.cep' [ngModelOptions]="{standalone: true}" type="number" class="form-control border-input"
+                                            placeholder="CEP">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Endereço</label>
+                                        <input [(ngModel)]='perfilProfissional.rua' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                            placeholder="Endereco" value="Rua teste,31">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Bairro</label>
+                                        <input [(ngModel)]='perfilProfissional.bairro' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                            placeholder="Bairro" value="Melbourne">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Cidade</label>
+                                        <input [(ngModel)]='perfilProfissional.cidade' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                            placeholder="Cidade" value="Australia">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Estado</label>
+                                        <input [(ngModel)]='perfilProfissional.estado' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                            placeholder="Estado">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          </ng-template>
+        </ngb-tab>
+
+
+        <ngb-tab title="Disabled" [disabled]="true">
+          <ng-template ngbTabContent>
+           
+
+            
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+
+
+
+      <!-- normal -->
                 <div>
                     <div class="card">
                         <div class="header">
@@ -211,7 +332,7 @@ But that's the difference in our opinions.</textarea>
                                     <!-- Dados Pessoais -->
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Dados Pessoais</h4>
+                                            <h4 class="title">Dados Profissionais</h4>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4">

@@ -143,3 +143,6 @@ app.delete('/profissional', (req,res) => {
 app.listen(3000, () => {
     console.log('Servidor rodando na 3000'); 
 });
+
+
+

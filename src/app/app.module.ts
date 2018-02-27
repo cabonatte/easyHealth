@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +39,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     ServicosComponent,
     HomePageComponent,
     ProfissionalPageComponent,
-    PerfilComponent,
+    PerfilComponent
 
 
   ],
@@ -46,7 +49,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     BrowserAnimationsModule,
     MatStepperModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   
   ],
   providers: [],
