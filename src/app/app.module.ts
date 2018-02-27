@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { BuscarPageComponent } from './pages/buscar-page/buscar-page.component';
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     HomePageComponent,
     ProfissionalPageComponent,
     PerfilComponent,
+    BuscarPageComponent,
 
 
   ],
@@ -46,7 +49,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     BrowserAnimationsModule,
     MatStepperModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   
   ],
   providers: [],
