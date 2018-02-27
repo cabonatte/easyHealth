@@ -15,6 +15,11 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProfissionalPageComponent } from './pages/profissional-page/profissional-page.component';
 import { RoutingModule } from './app.router';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {MatStepperModule} from '@angular/material/stepper';
+import {CarouselModule} from 'primeng/carousel'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +32,17 @@ import { RoutingModule } from './app.router';
     HomeComponent,
     ServicosComponent,
     HomePageComponent,
-    ProfissionalPageComponent
+    ProfissionalPageComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    RoutingModule
+    RoutingModule,
+    BrowserAnimationsModule,
+    MatStepperModule, 
+    CarouselModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

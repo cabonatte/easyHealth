@@ -59,14 +59,14 @@ app.post('/cadastro', (req, res) => {
         res.status(400).send({'mensagem': 'Dados não preenchidos'});
         return;
     }
-
+//User: Cliente e Profissional
     let usuarios = {
         nome: req.body.nome,
+        sobrenome: req.body.sobrenome,
         email: req.body.email,
         senha: req.body.senha,
-        confirmaSenha: req.body.confirmaSenha,
-        sexo: req.body.sexo,
-        telefone: req.body.telefone
+        confirmaSenha: req.body.confirmaSenha
+        
     }
 
     req.db.collection('cadastro')
@@ -80,16 +80,44 @@ app.post('/cadastro', (req, res) => {
 app.post('/profissional', (req, res) => {
     console.log(req.body);
 
-    let perfil = {
+    let perfilProfissional = {
+        perfil = {
         imagem: req.body.imagem, //foto de perfil
-        bairros: req.body.bairros,  //bairros atendidos
+        
+        },
+        endereco= {
+        cep: req.body.cep,
+        rua: req.body.rua,
+        numero: req.body.numero,
+        complemento: req.body.complemento,
+        bairro: req.body.bairro,
+        cidade: req.body.cidade,
+        estado: req.body.estado
+        },
+
+        dadosPessoais= {
+        cpf: req.body.cpf,
+        rg: req.body.rg,
+        dataNascimento: req.body.dataNascimento,
+        genero: req.body.genero,
+        telefoneCelular: req.body.telefoneCelular,
+        telefoneFixo: req.body.telefoneFixo
+        }, 
+        disponibilidade= {
+        diasSemana: req.body.diasSemana,
+        periodo: req.body.periodo,
+        bairros = []
+        },
+        dadosProfissionais = {
         especialidades: [], // especialidades selecionadas
         formacao: req.body.formacao,
         detalhes: req.body.detalhes
-    }
+        }
+        
+}
 
     req.db.collection('profissional')
-    .insert(perfil, (err, data) => {
+    .insert(perfilProfissional, (err, data) => {
         res.send(data);
     });
 });
@@ -102,6 +130,10 @@ app.get('/profissional', (req, res) => {
         res.send(data);
     });
 });
+
+
+
+
 
 app.listen(3000, () => {
     console.log('Servidor rodando na 3000'); 
