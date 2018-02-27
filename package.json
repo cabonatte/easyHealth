@@ -28,7 +28,6 @@
     "express": "^4.16.2",
     "express-mongo-db": "^2.0.4",
     "font-awesome": "^4.7.0",
-    "primeng": "^5.2.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },

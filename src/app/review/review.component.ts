@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CarouselModule} from 'primeng/carousel'
+
 
 @Component({
   selector: 'app-review',
