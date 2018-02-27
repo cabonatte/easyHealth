@@ -81,11 +81,11 @@ app.post('/profissional', (req, res) => {
     console.log(req.body);
 
     let perfilProfissional = {
-        perfil = {
-        imagem: req.body.imagem, //foto de perfil
+        perfil: {
+        imagem: req.body.imagem //foto de perfil
         
         },
-        endereco= {
+        endereco: {
         cep: req.body.cep,
         rua: req.body.rua,
         numero: req.body.numero,
@@ -95,7 +95,7 @@ app.post('/profissional', (req, res) => {
         estado: req.body.estado
         },
 
-        dadosPessoais= {
+        dadosPessoais: {
         cpf: req.body.cpf,
         rg: req.body.rg,
         dataNascimento: req.body.dataNascimento,
@@ -103,18 +103,18 @@ app.post('/profissional', (req, res) => {
         telefoneCelular: req.body.telefoneCelular,
         telefoneFixo: req.body.telefoneFixo
         }, 
-        disponibilidade= {
+        disponibilidade: {
         diasSemana: req.body.diasSemana,
         periodo: req.body.periodo,
-        bairros = []
+        bairros: []
         },
-        dadosProfissionais = {
+        dadosProfissionais: {
         especialidades: [], // especialidades selecionadas
         formacao: req.body.formacao,
         detalhes: req.body.detalhes
         }
         
-}
+    }
 
     req.db.collection('profissional')
     .insert(perfilProfissional, (err, data) => {
@@ -131,7 +131,12 @@ app.get('/profissional', (req, res) => {
     });
 });
 
-
+//Para deleter os dados do profissional
+app.delete('/profissional', (req,res) => {
+    req.db.collection('profissional')
+    .remove({})
+    res.send('DELETE request');
+});
 
 
 

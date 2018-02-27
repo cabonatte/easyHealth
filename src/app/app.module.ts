@@ -16,8 +16,12 @@ import { ProfissionalPageComponent } from './pages/profissional-page/profissiona
 import { RoutingModule } from './app.router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import {MatStepperModule} from '@angular/material/stepper';
-import {CarouselModule} from 'primeng/carousel'
+import { MatStepperModule } from '@angular/material/stepper';
+import { CarouselModule } from 'primeng/carousel'
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 
 @NgModule({
@@ -33,6 +37,7 @@ import {CarouselModule} from 'primeng/carousel'
     ServicosComponent,
     HomePageComponent,
     ProfissionalPageComponent,
+    PerfilComponent,
 
 
   ],
@@ -41,7 +46,9 @@ import {CarouselModule} from 'primeng/carousel'
     RoutingModule,
     BrowserAnimationsModule,
     MatStepperModule, 
-    CarouselModule
+    CarouselModule,
+    HttpClientModule,
+    FormsModule
   
   ],
   providers: [],
