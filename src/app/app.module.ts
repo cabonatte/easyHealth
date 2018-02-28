@@ -27,6 +27,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { BuscarPageComponent } from './pages/buscar-page/buscar-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BuscaFormComponent } from './busca-form/busca-form.component';
+import { ListaProfissionalComponent } from './lista-profissional/lista-profissional.component';
 
 
 
@@ -47,6 +48,7 @@ import { BuscaFormComponent } from './busca-form/busca-form.component';
     BuscarPageComponent,
     NavbarComponent,
     BuscaFormComponent,
+    ListaProfissionalComponent,
 
 
   ],
