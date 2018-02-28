@@ -14,16 +14,24 @@ app.use(cors());
 //busca os profissionais por localização
 app.post('/buscaProfissional', (req, res) => {
     
-    let local = {
-        bairro: req.body.bairro
-    } 
-    
-    req.db.collection('profissional')
-    .find({bairros: local.bairro})
-    .toArray((err, data) => {
-        res.send(data)
-    });
-});
+       let busca = {
+              bairro: req.body.bairro,
+              profissao: req.body.profissao
+           } 
+        
+           req.db.collection('profissional')
+           .find({"disponibilidade.bairros": busca.bairro, 
+                  "dadosProfissionais.profissao": busca.profissao
+                })
+           .toArray((err, data) => {
+               if(data){
+                res.send(data)
+               } 
+               else{
+                res.status(400).send({"Mensagem":"Nenhum profissional encontrado"})
+               } 
+           });
+        });
 
 // login geral
 app.post('/login', (req, res) => {  
@@ -111,7 +119,8 @@ app.post('/profissional', (req, res) => {
         dadosProfissionais: {
             especialidades: req.body.especialidades, // especialidades selecionadas
             formacao: req.body.formacao,
-            detalhes: req.body.detalhes
+            detalhes: req.body.detalhes,
+            profissao: req.body.profissao
         }
         
     }
