@@ -2,11 +2,12 @@
   <div class="card">
     <div class="row">
       <div class="col-lg-4">
-        <div class="card card-user" *ngFor = "let perfil of perfis">
+        <!-- <div class="card card-user" *ngFor = "let perfil of perfis"> -->
+        <div class="card card-user">
           <div class="content text-center">
             <div class="author">
               <img class="avatar border-white" src="assets/images/faces/face-2.jpg" alt="..." />
-              <h4 class="title">{{perfil.dadosPessoais.cpf}}
+              <h4 class="title">perfil.dadosPessoais.cpf
                 <br />
                 <p>R$ 80,00</p>
               </h4>
@@ -18,7 +19,7 @@
         <div class="col-lg-8">
           <div>
             <p class="description text-center">
-              {{perfil.dadosProfissionais.detalhes}}
+              <!-- {{perfil.dadosProfissionais.detalhes}} -->
             </p>
           </div>
         </div>

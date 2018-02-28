@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+<div class="card">
 <!-- perfil -->
 <ngb-tabset>
         <ngb-tab title="Simple">
@@ -154,218 +154,112 @@
         </ngb-tab>
 
 
-        <ngb-tab title="Disabled" [disabled]="true">
+        <ngb-tab title="Dados Pessoais">
           <ng-template ngbTabContent>
-           
-
-            
-          </ng-template>
-        </ngb-tab>
-      </ngb-tabset>
-
-
-
-      <!-- normal -->
-                <div>
-                    <div class="card">
-                        <div class="header">
-                            <h4 class="title"> Perfil</h4>
+           <!-- Dados Pessoais -->
+           <div class="card">
+                <div class="header">
+                    <h4 class="title">Dados Pessoais</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>*CPF</label>
+                            <input [(ngModel)]='perfilProfissional.cpf' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                placeholder="CPF" value="0000000000">
                         </div>
-                        <div class="content">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input [(ngModel)]='usuario.email' [ngModelOptions]="{standalone: true}" type="email" class="form-control border-input" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Senha</label>
-                                            <input [(ngModel)]='usuario.senha' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input" placeholder="Senha"
-                                                value="******">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Confirmaçaão de Senha</label>
-                                            <input [(ngModel)]='usuario.confirmaSenha' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                placeholder="Senha" value="******">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Nome</label>
-                                            <input [(ngModel)]='usuario.nome' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input" placeholder="Nome"
-                                                value="Nome">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Sobrenome</label>
-                                            <input [(ngModel)]='usuario.sobrenome' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                placeholder="Sobrenome" value="Sobrenome">
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- Endereco -->
-                                <div class="card">
-                                    <div class="header">
-                                        <h4 class="title">Endereço</h4>
-                                    </div>
-                                    <div class="content">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>*CEP</label>
-                                                    <input [(ngModel)]='perfilProfissional.cep' [ngModelOptions]="{standalone: true}" type="number" class="form-control border-input"
-                                                        placeholder="CEP">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label>Endereço</label>
-                                                    <input [(ngModel)]='perfilProfissional.rua' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                        placeholder="Endereco" value="Rua teste,31">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Bairro</label>
-                                                    <input [(ngModel)]='perfilProfissional.bairro' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                        placeholder="Bairro" value="Melbourne">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Cidade</label>
-                                                    <input [(ngModel)]='perfilProfissional.cidade' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                        placeholder="Cidade" value="Australia">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Estado</label>
-                                                    <input [(ngModel)]='perfilProfissional.estado' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                        placeholder="Estado">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Dados Pessoais -->
-                                <div class="card">
-                                    <div class="header">
-                                        <h4 class="title">Dados Pessoais</h4>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>*CPF</label>
-                                                <input [(ngModel)]='perfilProfissional.cpf' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                    placeholder="CPF" value="0000000000">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>*RG</label>
-                                                <input [(ngModel)]='perfilProfissional.rg' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                    placeholder="RG" value="0000000000">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Data de Nascimento</label>
-                                                <input [(ngModel)]='perfilProfissional.dataNascimento' [ngModelOptions]="{standalone: true}" type="number" class="form-control border-input"
-                                                    placeholder="Data de Nascimento">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>*Gênero</label>
-                                                <input [(ngModel)]='perfilProfissional.genero' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                    placeholder="Gênero" value="0000000000">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>*Telefone Celular</label>
-                                                <input [(ngModel)]='perfilProfissional.telefoneCelular' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                    placeholder="Telefone Celular" value="0000000000">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>*Telefone Fixo</label>
-                                                <input [(ngModel)]='perfilProfissional.telefoneFixo' [ngModelOptions]="{standalone: true}" type="number" class="form-control border-input"
-                                                    placeholder="Telefone Fixo">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Breve Descrição</label>
-                                                <textarea [(ngModel)]='perfilProfissional.detalhes' [ngModelOptions]="{standalone: true}" rows="5" class="form-control border-input"
-                                                    placeholder="Here can be your description" value="Mike">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>*RG</label>
+                            <input [(ngModel)]='perfilProfissional.rg' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                placeholder="RG" value="0000000000">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Data de Nascimento</label>
+                            <input [(ngModel)]='perfilProfissional.dataNascimento' [ngModelOptions]="{standalone: true}" type="number" class="form-control border-input"
+                                placeholder="Data de Nascimento">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>*Gênero</label>
+                            <input [(ngModel)]='perfilProfissional.genero' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                placeholder="Gênero" value="0000000000">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>*Telefone Celular</label>
+                            <input [(ngModel)]='perfilProfissional.telefoneCelular' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                placeholder="Telefone Celular" value="0000000000">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>*Telefone Fixo</label>
+                            <input [(ngModel)]='perfilProfissional.telefoneFixo' [ngModelOptions]="{standalone: true}" type="number" class="form-control border-input"
+                                placeholder="Telefone Fixo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Breve Descrição</label>
+                            <textarea [(ngModel)]='perfilProfissional.detalhes' [ngModelOptions]="{standalone: true}" rows="5" class="form-control border-input"
+                                placeholder="Here can be your description" value="Mike">
 Oh so, your weak rhyme
 You doubt I'll bother, reading into it
 I'll probably won't, left to my own devices
 But that's the difference in our opinions.</textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Dados Pessoais -->
-                                    <div class="card">
-                                        <div class="header">
-                                            <h4 class="title">Dados Profissionais</h4>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Local de atencimento</label>
-                                                    <input type="text" class="form-control border-input" placeholder="locais" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Disponibilidade</label>
-                                                    <input type="text" class="form-control border-input" placeholder="agenda" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Valor</label>
-                                                    <input [(ngModel)]='perfilProfissional.valor' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
-                                                        placeholder="Valor" value="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-center">
-                                        <button (click)="inserir()" type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+          </ng-template>
+        </ngb-tab>
+
+        <ngb-tab title="Dados Profissionais">
+                <ng-template ngbTabContent>
+                  <!-- Dados Profissionais -->
+                  <div class="card">
+                        <div class="header">
+                            <h4 class="title">Dados Profissionais</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Local de atencimento</label>
+                                    <input type="text" class="form-control border-input" placeholder="locais" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Disponibilidade</label>
+                                    <input type="text" class="form-control border-input" placeholder="agenda" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Valor</label>
+                                    <input [(ngModel)]='perfilProfissional.valor' [ngModelOptions]="{standalone: true}" type="text" class="form-control border-input"
+                                        placeholder="Valor" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+              </ngb-tab>
+      </ngb-tabset>
+
+<div class="text-center">
+    <button (click)="inserir()" type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
 </div>
+</div>
+<div class="clearfix"></div>
+                            
