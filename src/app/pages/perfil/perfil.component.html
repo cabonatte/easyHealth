@@ -1,78 +1,86 @@
-<div class="container">
-  <div class="card">
-    <div class="row">
-      <div class="col-lg-4">
-        <!-- <div class="card card-user" *ngFor = "let perfil of perfis"> -->
-        <div class="card card-user">
-          <div class="content text-center">
-            <div class="author">
-              <img class="avatar border-white" src="assets/images/faces/face-2.jpg" alt="..." />
-              <h4 class="title">perfil.dadosPessoais.cpf
-                <br />
-                <p>R$ 80,00</p>
-              </h4>
+<app-navbar></app-navbar>
+<div id="perfil">
+ <div class="container">
+    <div class="card">
+      <div class="row">
+        <div class="col-lg-4">
+          <!-- <div class="card card-user" *ngFor = "let perfil of perfis"> -->
+          <div class="card card-user">
+            <div class="content text-center">
+                <img class="avatar border-white" src="assets/images/faces/face-2.jpg" alt="..." />
+                <h4 class="title">perfil.dadosPessoais.cpf
+                  <br />
+                  <p>R$ 80,00</p>
+                </h4>
             </div>
           </div>
         </div>
+        <div class="card">
+          <div class="col-lg-8">
+            <div>
+              <p class="description text-center">
+                <!-- {{perfil.dadosProfissionais.detalhes}} -->
+              </p>
+            </div>
+          </div>
       </div>
-      <div class="card">
-        <div class="col-lg-8">
-          <div>
-            <p class="description text-center">
-              <!-- {{perfil.dadosProfissionais.detalhes}} -->
-            </p>
+      </div>
+    </div>
+    <hr>
+  </div>
+  
+
+  <!-- Dados Pessoais -->
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <h4 class="title">Dados Pessoais</h4>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <div class="form-group">
+                <label>Profissaão</label>
+                <p>Nutricionista</p>
+              </div>
+            </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Local de atencimento</label>
+            <p>local</p>
           </div>
         </div>
-    </div>
-    </div>
-  </div>
-</div>
- 
-
-<!-- Dados Pessoais -->
-<div class="container">
-  <div class="card">
-    <div class="header">
-      <h4 class="title">Dados Pessoais</h4>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="form-group">
-          <label>Local de atencimento</label>
-          <p>local</p>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Disponibilidade</label>
+            <p>segunda-feira</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Valor</label>
+            <p>R$ 40,00</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label>Disponibilidade</label>
-          <p>segunda-feira</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>*Telefone Celular</label>
+            <p>88777287248</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label>Valor</label>
-          <p>R$ 40,00</p>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>*Telefone Fixo</label>
+            <p>88777287248</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="form-group">
-          <label>*Telefone Celular</label>
-          <p>88777287248</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label>*Telefone Fixo</label>
-          <p>88777287248</p>
-        </div>
-      </div>
+    
+    
+    <div class="text-center">
+      <button (click)="inserir()" type="submit" class="btn btn-info btn-fill btn-wd">Agende Agora</button>
     </div>
   </div>
-  
-  
-  <div class="text-center">
-    <button (click)="inserir()" type="submit" class="btn btn-info btn-fill btn-wd">Agende Agora</button>
-  </div>
-</div>
+</div> 
