@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ImageUploadModule } from "angular2-image-upload";
+
 
 @Component({
   selector: 'app-profissional-page',
