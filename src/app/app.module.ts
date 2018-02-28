@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { BuscarPageComponent } from './pages/buscar-page/buscar-page.component';
 
 
 
@@ -39,7 +40,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     ServicosComponent,
     HomePageComponent,
     ProfissionalPageComponent,
-    PerfilComponent
+    PerfilComponent,
+    BuscarPageComponent,
 
 
   ],
