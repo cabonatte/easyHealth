@@ -122,25 +122,16 @@ app.post('/profissional', (req, res) => {
     });
 });
 
-
-app.get('/profissional', (req, res) => {
-    req.db.collection('profissional')
-    .find({})
-    .toArray((err, data) => {
-        res.send(data);
+//profissional por id
+app.post('/selecionaProfissional', (req, res) => {
+    let profissionalSelecionado = {
+        _id: new ObjectID (req.body.idProfissional)
+    }
+    req.db.collection('profissional').findOne(profissionalSelecionado, (err, data) =>{
+        res.send(data)
     });
 });
 
-app.get('/cliente/:id', (req, res) => {
-    let busca = {
-        _id: new ObjectID(req.params.id)
-    };
-    
-    req.db.collection('clientes')
-    .findOne(busca, (err, data) => {
-        res.send(data);
-    });
-});
 
 //Para deleter os dados do profissional
 app.delete('/profissional', (req,res) => {

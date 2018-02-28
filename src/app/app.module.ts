@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+import { ImageUploadModule } from "angular2-image-upload";
 
 
 import { AppComponent } from './app.component';
@@ -24,6 +25,9 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { BuscarPageComponent } from './pages/buscar-page/buscar-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BuscaFormComponent } from './busca-form/busca-form.component';
+import { ListaProfissionalComponent } from './lista-profissional/lista-profissional.component';
 
 
 
@@ -42,6 +46,9 @@ import { BuscarPageComponent } from './pages/buscar-page/buscar-page.component';
     ProfissionalPageComponent,
     PerfilComponent,
     BuscarPageComponent,
+    NavbarComponent,
+    BuscaFormComponent,
+    ListaProfissionalComponent,
 
 
   ],
@@ -52,7 +59,7 @@ import { BuscarPageComponent } from './pages/buscar-page/buscar-page.component';
     MatStepperModule, 
     HttpClientModule,
     FormsModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),ImageUploadModule.forRoot()
   
   ],
   providers: [],
