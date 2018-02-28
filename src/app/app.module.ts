@@ -22,7 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatStepperModule } from '@angular/material/stepper';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { BuscarPageComponent } from './pages/buscar-page/buscar-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -59,7 +59,9 @@ import { ListaProfissionalComponent } from './lista-profissional/lista-profissio
     MatStepperModule, 
     HttpClientModule,
     FormsModule,
-    NgbModule.forRoot(),ImageUploadModule.forRoot()
+    NgbModule.forRoot(),ImageUploadModule.forRoot(),
+    ReactiveFormsModule
+    
   
   ],
   providers: [],

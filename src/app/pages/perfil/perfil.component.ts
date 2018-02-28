@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import {NgbModal, ModalDismissReasons, } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-perfil',
@@ -9,19 +9,26 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PerfilComponent implements OnInit {
   perfis;
+  closeResult: string;
 
-
-  constructor(public http: HttpClient) {
-    this.http.get("http://localhost:3000/profissional").subscribe(
-      (dados) => {
-        this.perfis = dados;
-        console.log(dados);
-    
-      }
-  )
-   }
-
-  ngOnInit() {
+  
+  
+  
+    constructor() { }
+  
+    ngOnInit() {
+    }
+  
   }
 
-}
+
+  // constructor(public http: HttpClient) {
+  //   this.http.get("http://localhost:3000/profissional").subscribe(
+  //     (dados) => { 
+  //       this.perfis = dados;
+  //       console.log(dados);
+    
+  //     }
+  // )
+  //  }
+
