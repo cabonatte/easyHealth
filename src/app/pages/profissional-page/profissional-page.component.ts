@@ -57,14 +57,13 @@ export class ProfissionalPageComponent implements OnInit {
   
   inserir(){
 
-    let cadastro = {
-      usuario: this.usuario,
-      perfilProfissional: this.perfilProfissional
-    }
-
-    this.http.post('http://localhost:3000/cadastro', cadastro)
-    .subscribe((dadoss) => {
-      console.log(dadoss)
+    this.http.post('http://localhost:3000/cadastro', this.usuario)
+    .subscribe((dados) => {
+      console.log(dados)
+    });
+    this.http.post('http://localhost:3000/profissional', this.perfilProfissional)
+    .subscribe((dados) => {
+      console.log(dados)
     });
   }
   ngOnInit() {
