@@ -10,7 +10,6 @@ import { MenuComponent } from './menu/menu.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ProfissionaisComponent } from './profissionais/profissionais.component';
 import { FooterComponent } from './footer/footer.component';
-import { PrecoComponent } from './preco/preco.component';
 import { ReviewComponent } from './review/review.component';
 import { HomeComponent } from './home/home.component';
 import { ServicosComponent } from './servicos/servicos.component';
@@ -25,7 +24,6 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { BuscarPageComponent } from './pages/buscar-page/buscar-page.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { BuscaFormComponent } from './busca-form/busca-form.component';
 import { ListaProfissionalComponent } from './lista-profissional/lista-profissional.component';
 
@@ -38,7 +36,6 @@ import { ListaProfissionalComponent } from './lista-profissional/lista-profissio
     SobreComponent,
     ProfissionaisComponent,
     FooterComponent,
-    PrecoComponent,
     ReviewComponent,
     HomeComponent,
     ServicosComponent,
@@ -46,7 +43,6 @@ import { ListaProfissionalComponent } from './lista-profissional/lista-profissio
     ProfissionalPageComponent,
     PerfilComponent,
     BuscarPageComponent,
-    NavbarComponent,
     BuscaFormComponent,
     ListaProfissionalComponent,
 
